@@ -67,3 +67,24 @@ SIFT (scale-invariant feature transform)會針對每個選定的keypoint取周�
 ## Image Alignment and Infinite Zooming Effect
 ![dorm](Images/out_GIF_ORB.gif)
 
+#### 4. FLANN-Based Matcher
+
+FLANN(Fast Library for Approximate Nearest Neighbors)是先利用SIFT提取keypoints並且計算descriptors，接著FLANN能快速地建立K-dimensional Tree來做到有效的feature matching。<br>
+優點：是目前最快的feature matching演算法，能夠減少計算複雜度以及時間，因此也適合應用在feature 較多的場景。<br>
+
+#### scale
+
+<p float="left">
+	<img src="./Images/flann_scale2.png" width="400px" />
+	<img src="./Images/flann_scale3.png" width="400px" />
+</p>
+
+##### rotate
+
+<p float="left">
+	<img src="./Images/flann_rotate.png" width="400px" />
+	<img src="./Images/flann_rotate2.png" width="400px" />
+</p>
+
+
+
